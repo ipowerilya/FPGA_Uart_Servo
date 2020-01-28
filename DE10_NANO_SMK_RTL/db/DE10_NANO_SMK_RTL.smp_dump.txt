@@ -1,0 +1,5 @@
+
+State Machine - |DE10_NANO_SMK_RTL|UART_rs232_rx:I_RS232RX|State
+Name State.READ 
+State.IDLE 0 
+State.READ 1 

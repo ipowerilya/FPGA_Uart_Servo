@@ -1,0 +1,268 @@
+Determining the location of the ModelSim executable...
+
+Using: D:\FPGA\modelsim_ase\win32aloem
+
+To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
+Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-Altera will be used.
+
+**** Generating the ModelSim Testbench ****
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off DE10_NANO_SMK_RTL -c DE10_NANO_SMK_RTL --vector_source="D:/FPGA/project/DE10_NANO_SMK_RTL/Waveform.vwf" --testbench_file="D:/FPGA/project/DE10_NANO_SMK_RTL/simulation/qsim/Waveform.vwf.vt"
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Copyright (C) 2018  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details.
+    Info: Processing started: Wed Nov 20 13:12:08 2019
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off DE10_NANO_SMK_RTL -c DE10_NANO_SMK_RTL --vector_source=D:/FPGA/project/DE10_NANO_SMK_RTL/Waveform.vwf --testbench_file=D:/FPGA/project/DE10_NANO_SMK_RTL/simulation/qsim/Waveform.vwf.vt
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (201000): Generated Verilog Test Bench File D:/FPGA/project/DE10_NANO_SMK_RTL/simulation/qsim/Waveform.vwf.vt for simulation
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4729 megabytes
+    Info: Processing ended: Wed Nov 20 13:12:09 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+Completed successfully. 
+
+Completed successfully. 
+
+**** Generating the functional simulation netlist ****
+
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/FPGA/project/DE10_NANO_SMK_RTL/simulation/qsim/" DE10_NANO_SMK_RTL -c DE10_NANO_SMK_RTL
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Copyright (C) 2018  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details.
+    Info: Processing started: Wed Nov 20 13:12:10 2019
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/FPGA/project/DE10_NANO_SMK_RTL/simulation/qsim/ DE10_NANO_SMK_RTL -c DE10_NANO_SMK_RTL
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file DE10_NANO_SMK_RTL.vo in folder "D:/FPGA/project/DE10_NANO_SMK_RTL/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4738 megabytes
+    Info: Processing ended: Wed Nov 20 13:12:12 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+Completed successfully. 
+
+**** Generating the ModelSim .do script ****
+
+D:/FPGA/project/DE10_NANO_SMK_RTL/simulation/qsim/DE10_NANO_SMK_RTL.do generated.
+
+Completed successfully. 
+
+**** Running the ModelSim simulation ****
+
+D:/FPGA/modelsim_ase/win32aloem/vsim -c -do DE10_NANO_SMK_RTL.do
+
+Reading D:/FPGA/modelsim_ase/tcl/vsim/pref.tcl
+
+# 10.5b
+
+
+# do DE10_NANO_SMK_RTL.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:12:12 on Nov 20,2019
+# vlog -work work DE10_NANO_SMK_RTL.vo 
+
+# -- Compiling module DE10_NANO_SMK_RTL
+# 
+# Top level modules:
+# 	DE10_NANO_SMK_RTL
+
+# End time: 13:12:13 on Nov 20,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:12:13 on Nov 20,2019
+# vlog -work work Waveform.vwf.vt 
+# -- Compiling module DE10_NANO_SMK_RTL_vlg_vec_tst
+# 
+# Top level modules:
+# 	DE10_NANO_SMK_RTL_vlg_vec_tst
+
+# End time: 13:12:13 on Nov 20,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.DE10_NANO_SMK_RTL_vlg_vec_tst 
+# Start time: 13:12:14 on Nov 20,2019
+# Loading work.DE10_NANO_SMK_RTL_vlg_vec_tst
+# Loading work.DE10_NANO_SMK_RTL
+# Loading cyclonev_ver.cyclonev_io_obuf
+# Loading cyclonev_ver.cyclonev_io_ibuf
+# Loading cyclonev_ver.cyclonev_clkena
+# Loading cyclonev_ver.cyclonev_lcell_comb
+# Loading altera_ver.dffeas
+# Loading cyclonev_ver.cyclonev_mac
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(5715): Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult0~mac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(5715): Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult0~mac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(5715): Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult0~mac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(5715): Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult0~mac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(5715): Port type is incompatible with connection (port 'ay').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult0~mac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(5715): [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4326).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult0~mac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(5715): [PCDPC] - Port size (16) does not match connection size (18) for port 'bx'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4328).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult0~mac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(5715): [PCDPC] - Port size (16) does not match connection size (19) for port 'by'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4329).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult0~mac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(5715): [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4330).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult0~mac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(5715): [PCDPC] - Port size (10) does not match connection size (27) for port 'scanin'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4332).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult0~mac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(5715): [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4333).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult0~mac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) (): [PCDPC] - Port size () does not match connection size () for .
+#    Time: 0 ps  Iteration: 0  Protected: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult0~mac /inst/ File: nofile
+# ** Warning: (vsim-3015) (): [PCDPC] - Port size () does not match connection size () for .
+#    Time: 0 ps  Iteration: 0  Protected: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult0~mac /inst/ File: nofile
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(6969): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(6969): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(6969): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(6969): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(6969): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(6969): [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4326).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(6969): [PCDPC] - Port size (16) does not match connection size (18) for port 'bx'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4328).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(6969): [PCDPC] - Port size (16) does not match connection size (19) for port 'by'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4329).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(6969): [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4330).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(6969): [PCDPC] - Port size (18) does not match connection size (27) for port 'scanin'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4332).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(6969): [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4333).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) (): [PCDPC] - Port size () does not match connection size () for .
+#    Time: 0 ps  Iteration: 0  Protected: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_llmac /inst/ File: nofile
+# ** Warning: (vsim-3015) (): [PCDPC] - Port size () does not match connection size () for .
+#    Time: 0 ps  Iteration: 0  Protected: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_llmac /inst/ File: nofile
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(7048): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_hlmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(7048): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_hlmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(7048): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_hlmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(7048): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_hlmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(7048): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_hlmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(7048): [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4326).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_hlmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(7048): [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4330).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_hlmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(7048): [PCDPC] - Port size (14) does not match connection size (27) for port 'scanin'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4332).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_hlmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(7048): [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4333).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_hlmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) (): [PCDPC] - Port size () does not match connection size () for .
+#    Time: 0 ps  Iteration: 0  Protected: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_hlmac /inst/ File: nofile
+# ** Warning: (vsim-3015) (): [PCDPC] - Port size () does not match connection size () for .
+#    Time: 0 ps  Iteration: 0  Protected: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult1~mult_hlmac /inst/ File: nofile
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(8743): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(8743): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(8743): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(8743): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(8743): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(8743): [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4326).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(8743): [PCDPC] - Port size (16) does not match connection size (18) for port 'bx'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4328).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(8743): [PCDPC] - Port size (16) does not match connection size (19) for port 'by'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4329).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(8743): [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4330).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(8743): [PCDPC] - Port size (18) does not match connection size (27) for port 'scanin'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4332).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(8743): [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4333).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_llmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) (): [PCDPC] - Port size () does not match connection size () for .
+#    Time: 0 ps  Iteration: 0  Protected: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_llmac /inst/ File: nofile
+# ** Warning: (vsim-3015) (): [PCDPC] - Port size () does not match connection size () for .
+#    Time: 0 ps  Iteration: 0  Protected: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_llmac /inst/ File: nofile
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(8822): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_hlmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(8822): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_hlmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(8822): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_hlmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(8822): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_hlmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3016) DE10_NANO_SMK_RTL.vo(8822): Port type is incompatible with connection (port 'ax').
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_hlmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(8822): [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4326).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_hlmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(8822): [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4330).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_hlmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(8822): [PCDPC] - Port size (14) does not match connection size (27) for port 'scanin'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4332).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_hlmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+# ** Warning: (vsim-3015) DE10_NANO_SMK_RTL.vo(8822): [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v(4333).
+#    Time: 0 ps  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_hlmac  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cyclonev_atoms.v
+
+# ** Warning: (vsim-3015) (): [PCDPC] - Port size () does not match connection size () for .
+#    Time: 0 ps  Iteration: 0  Protected: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_hlmac /inst/ File: nofile
+# ** Warning: (vsim-3015) (): [PCDPC] - Port size () does not match connection size () for .
+#    Time: 0 ps  Iteration: 0  Protected: /DE10_NANO_SMK_RTL_vlg_vec_tst/i1/\Mult2~mult_hlmac /inst/ File: nofile
+# after#27
+# ** Note: $finish    : Waveform.vwf.vt(60)
+#    Time: 1 us  Iteration: 0  Instance: /DE10_NANO_SMK_RTL_vlg_vec_tst
+# End time: 13:12:16 on Nov 20,2019, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 61
+
+Completed successfully. 
+
+**** Converting ModelSim VCD to vector waveform ****
+
+Reading D:/FPGA/project/DE10_NANO_SMK_RTL/Waveform.vwf...
+
+Reading D:/FPGA/project/DE10_NANO_SMK_RTL/simulation/qsim/DE10_NANO_SMK_RTL.msim.vcd...
+
+Processing channel transitions... 
+
+Writing the resulting VWF to D:/FPGA/project/DE10_NANO_SMK_RTL/simulation/qsim/DE10_NANO_SMK_RTL_20191120131216.sim.vwf
+
+Finished VCD to VWF conversion.
+
+Completed successfully. 
+
+All completed.

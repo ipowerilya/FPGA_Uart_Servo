@@ -1,0 +1,6 @@
+DATE = "13:11:00 December 19, 2016"
+QUARTUS_VERSION = "16.0.2"
+
+# Revisions
+
+PROJECT_REVISION = "DE10_NANO_SMK_RTL"

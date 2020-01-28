@@ -1,0 +1,79 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/FPGA/project/DE10_NANO_SMK_RTL/simulation/modelsim
+vDE10_NANO_SMK_RTL
+Z1 !s110 1574244629
+!i10b 1
+!s100 Y0ARi3hHo=la>zHN>g76K2
+IdDFY^VH3`:?1kM3kRiRFn0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1573647470
+8D:/FPGA/project/DE10_NANO_SMK_RTL/DE10_NANO_SMK_RTL.v
+FD:/FPGA/project/DE10_NANO_SMK_RTL/DE10_NANO_SMK_RTL.v
+L0 6
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1574244629.000000
+!s107 D:/FPGA/project/DE10_NANO_SMK_RTL/DE10_NANO_SMK_RTL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA/project/DE10_NANO_SMK_RTL|D:/FPGA/project/DE10_NANO_SMK_RTL/DE10_NANO_SMK_RTL.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+D:/FPGA/project/DE10_NANO_SMK_RTL
+Z6 tCvgOpt 0
+n@d@e10_@n@a@n@o_@s@m@k_@r@t@l
+vPWM_Geneator
+R1
+!i10b 1
+!s100 Jo=Z8R=ln12@nc_=:Z3<23
+I3=@HCNT]CI9XAHZ4^B5TU0
+R2
+R0
+w1487937032
+8D:/FPGA/project/DE10_NANO_SMK_RTL/ip/PWM_Geneator.v
+FD:/FPGA/project/DE10_NANO_SMK_RTL/ip/PWM_Geneator.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/FPGA/project/DE10_NANO_SMK_RTL/ip/PWM_Geneator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA/project/DE10_NANO_SMK_RTL/ip|D:/FPGA/project/DE10_NANO_SMK_RTL/ip/PWM_Geneator.v|
+!i113 1
+R5
+Z7 !s92 -vlog01compat -work work +incdir+D:/FPGA/project/DE10_NANO_SMK_RTL/ip
+R6
+n@p@w@m_@geneator
+vUI
+R1
+!i10b 1
+!s100 [gkl>VhBF=l:8zf:P8E632
+Ie;CZh][Ul4dY<3?9D_dbR1
+R2
+R0
+w1574244413
+8D:/FPGA/project/DE10_NANO_SMK_RTL/ip/UI.v
+FD:/FPGA/project/DE10_NANO_SMK_RTL/ip/UI.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1574244628.000000
+!s107 D:/FPGA/project/DE10_NANO_SMK_RTL/ip/UI.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA/project/DE10_NANO_SMK_RTL/ip|D:/FPGA/project/DE10_NANO_SMK_RTL/ip/UI.v|
+!i113 1
+R5
+R7
+R6
+n@u@i

@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at UART_tx.v(92): always construct contains both blocking and non-blocking assignments File: D:/FPGA/project/UART_232/src/UART_tx.v Line: 92
