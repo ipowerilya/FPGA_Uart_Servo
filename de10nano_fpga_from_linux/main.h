@@ -11,7 +11,7 @@
 #include "socal/socal.h"
 #include "socal/hps.h"
 
-// Useful macros
+
 #define BIT(x,n) (((x) >> (n)) & 1)
 #define INSERT_BITS(original, mask, value, num) (original & (~mask)) | (value << num)
 
