@@ -8,7 +8,7 @@
 #define FPGA_MANAGER_DATA_ADD (0xffb90000) // FPGA MANAGER DATA REGISTER ADDRESS
 
 int fd; // file descriptor for memory access
-void * virtualbase;
+void * virtualbase; // puntero genérico con map de userspace a hw
 char rbf_file [32] = "fpga_config_file.rbf";
 
 int main(int argc, const char * argv[])
@@ -19,7 +19,8 @@ int main(int argc, const char * argv[])
 
   virtualbase = mmap(NULL, largobytes,
    (PROT_READ|PROT_WRITE), MAP_SHARED, fd, FPGA_MANAGER_ADD);
-
+  // MAP_SHARED comparte la memoria con otras apicaciones
+  // PROT READ y PROT WRITE, para lectura y escritura
 
   if(argc > 1) {
     if(strcmp(argv[1], "report_status") == 0)     report_status();
@@ -37,7 +38,7 @@ int main(int argc, const char * argv[])
   }
 
   else {
- 
+    // Default action is to program fpga with default rbf file.
     config_routine();
   }
 
@@ -46,7 +47,8 @@ int main(int argc, const char * argv[])
 }
 
 void report_status()
-
+// Status reg report MSEL (RO) config and FPGA current state (RW).
+// Also report cfgwdth, cdratio registers and other useful registers.
 {
   uint8_t status = alt_read_byte(virtualbase + STAT_OFFSET);
   uint8_t mode_mask = 0b111;
@@ -207,7 +209,9 @@ void fpga_on()
   printf("%s.\n", "Turning FPGA On");
 }
 
-
+// ****************************************************************************
+// *                            Auxiliary functions                           *
+// ****************************************************************************
 
 char * status_code(uint8_t code)
 {
@@ -223,7 +227,9 @@ char * status_code(uint8_t code)
   return description;
 }
 
-
+// ****************************************************************************
+// *                          Complete config routine                         *
+// ****************************************************************************
 
 void config_routine()
 {
